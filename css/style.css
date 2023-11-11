@@ -1,0 +1,389 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  Color: white;
+  background-color: #4C24EA;
+}
+
+.white-link {
+  color: white; /* Sørg for at dette er kontrast til bakgrunnen */
+  font-size: 16px; /* Sett en synlig font-størrelse */
+  opacity: 1; /* Sørg for at lenken ikke er gjennomsiktig */
+  visibility: visible; /* Sørg for at lenken er synlig */
+  text-decoration: none; /* Valgfritt, fjerner understreking */
+  z-index: 10; /* Juster etter behov for å unngå overlapping */
+  /* Andre stiler etter behov */
+}
+
+.site-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header, main, footer {
+    flex: 1;
+}
+
+img {
+  max-width: 100%; /* Begrenser bildets maksimale bredde til foreldrelementets bredde */
+  height: auto; /* Automatisk høyde for å opprettholde bildets sideforhold */
+  display: block; /* Fjerner ekstra plass under bildet som vises som en linje */
+}
+
+
+.mid-title {
+  text-align: center;
+  font-size: 3em;
+}
+
+.shoe-title{
+  background-color:#CA4EC5;
+  border-radius: 15px;
+  padding-left: 10px; 
+  padding-right: 10px
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 5px;
+}
+
+article {
+    margin-bottom: 15px; 
+      width: 40%;             
+      margin: 0 auto 20px;  
+      text-align: justify; /* margin: 0 auto 20px; rett marg, både høyre og venste side*/
+      hyphens: auto;       /*orddeling ved lange ord*/
+}
+
+.desktop-only {
+    display: none;/*skjuler fotballspilleren ved mobil-visning*/
+}
+
+footer {
+    min-height: 80px;
+    display: flex;
+    justify-content: center;  
+    align-items: center;   
+    flex-wrap: wrap;          
+}
+
+.button {
+   width: 90%; 
+    padding: 15px 20px;  
+    font-size: 1rem; 
+    color: white;
+    background-color: #750971;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button-container {
+  color: white;
+  text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+.button-container1 {
+   width: 45%; 
+   display: flex;
+    justify-content: center;  
+    align-items: center;   
+    flex-wrap: wrap;
+  color: white;
+  text-decoration: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*Søkte på ChatGpt og fant koden for at teksten skal være hvit uansett om du trykker eller ikke */
+.button-container a {
+    text-decoration: none;  
+    color: #ffffff;        
+}
+
+.image-container{
+  
+  margin-top: 30px;
+
+}
+
+.image-container img {
+    width: 40%; 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto; 
+  border-radius: 15px; 
+}
+
+.icon {
+    padding: 15px;
+    color: #007BFF; 
+}
+
+.image-wrapper3 {
+  width: 100%;
+  display: flex;  
+  flex-wrap: nowrap; 
+}
+
+.image-container3 {
+  vertical-align: top;
+  margin: 0 5px;
+
+}
+
+.image-container3 img {
+  width: 100%; 
+  height: auto;
+}
+.three-parts-wrapper {
+    display: flex;           
+    width: 98%;             
+    justify-content: space-between; 
+    background-color: lightgray;
+}
+
+.part {
+    flex: 1;           
+    height: 120px;          
+    border: 1px solid black; 
+    box-sizing: border-box;  
+}
+
+.part:not(:last-child) {
+    border-right: none;     
+}
+
+.three-parts-wrapper .part:nth-child(2) {
+  padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right:5px;
+}
+
+.three-parts-wrapper > .part:last-child {
+   padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#selectedImageName, p {
+
+    color: black; 
+    margin: 0; 
+    padding: 5px 0; 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+#shoeSizeSelect, #priceSelect {
+    width: 50%;
+    color: black;
+    border: 1px solid #ccc;
+    padding: 5px; 
+}
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+#selectedImageName {
+    font-weight: bold;
+}
+
+.input-field input[type="text"] {
+    width: 100%;            
+    padding: 12px 16px;     
+    border: 1px solid #ccc; 
+    border-radius: 25px;    
+    font-size: 16px;       
+    box-sizing: border-box; 
+}
+fieldset {
+    border: none;
+    margin: 3px;
+    padding: 1px;
+}
+.part {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Dette justerer barn-elementer (innhold) til høyre */
+}
+.part p {
+  display: flex;
+  justify-content: space-between; /* Dette fordeler innholdet i <p> taggen (tekst og select) */
+  align-items: center; /* Dette sikrer at elementene er sentrert vertikalt */
+  width: 100%; /* Dette sikrer at <p> taggen tar hele bredden av foreldreelementet */
+}
+.part select {
+  margin-left: auto; /* Dette skyver select-elementet til høyre */
+}
+
+/*Kodinga er gjort i Mobile fist og under er kodinga for desktopvisninga med tre kolloner*/
+@media (min-width: 768px) {
+
+/*Desktop - bestilling */  
+  .left-title1 {
+      grid-column: 2; 
+      grid-row: 1; 
+  }
+  .personal-details-block {
+      grid-column: 2; 
+      grid-row: 2 
+  } 
+  .button-container1 {
+      grid-column: 2;
+      grid-row: 3; 
+  }
+  .left-title2 {
+      grid-column: 3;
+      grid-row:1; 
+  }
+  .order-detail-block {
+      grid-column: 3;
+      grid-row:2; 
+    margin-right: 10px;
+  }
+
+  /*Desktop - bestilling */ 
+  #adidas-title {
+      grid-column: 2;
+      grid-row: 1;
+  }
+
+  #nike-title {
+      grid-column: 3;
+      grid-row: 1;
+  }
+
+  #adidas-images {
+      grid-column: 2;
+      grid-row: 2;
+  }
+
+  #nike-images {
+      grid-column: 3;
+      grid-row: 2;
+  }
+
+  .three-parts-wrapper {
+      grid-column: 2 / span 2;
+      grid-row: 3;
+  }
+  .part {
+      flex: 1;           
+      height: 180px;    
+      border: 1px solid black;
+      box-sizing: border-box; 
+  }
+    .content-expand {
+      display: grid;
+      grid-template-columns: 30% 40% 30%;
+      grid-template-rows: 30% 40% 30%;
+      gap: 5px;
+  
+    }    
+    .image-container {
+        grid-column: 2; 
+        grid-row: 2;    
+      display: flex;
+      align-items: flex-start; 
+ 
+
+    }
+
+  .image-container img {
+   
+    height: auto;
+      width: 30%; 
+    
+      border-radius: 15px; 
+  }
+
+  .button {
+     width: 80%;  
+     padding: 20px 25px;  
+     font-size: 1.2rem;  
+  }
+
+  .button-container:nth-child(2) { 
+      grid-column: 2; 
+      grid-row: 3;
+    display: flex;
+    justify-content: center;  
+    align-items: center;   
+  }
+
+    .button-container:last-child { 
+        grid-column: 3; 
+        grid-row: 3;  
+      display: flex;
+      justify-content: center;   
+          
+    }
+  
+  footer {
+     
+  }
+
+  .mid-title {
+      text-align: center;
+      flex-grow: 1;
+  }
+  
+  article {
+      grid-row: 1;
+      grid-column: 1;
+  }
+
+  .icon {
+      font-size: 1.5rem; 
+     margin: 15px;
+  }
+  
+  article {
+    width: 80%;             
+    margin: 0 auto 10px;    
+    text-align: justify;
+    hyphens: auto; 
+  }
+ 
+
+.desktop-only {
+    display: block !important; 
+}
+  
+  .image-container2 {
+      grid-column: 3; 
+      grid-row: 2;    
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .image-container2 img {
+      width: 60%; 
+      display: block; 
+      margin-left: auto;
+      margin-right: auto; 
+    border-radius: 15px; 
+  }
+  .shoe-title {
+      grid-column: 1;
+      grid-row: 3;
+  }
+
+
+
+}
