@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="no">
+<!-- Nettsiden deles inn i <head> og <body> --> 
+
+<!-- Tag for <head> starter her, med tittel for nettsidetab, tegnsett og link til css og javascript --> 
+<head>
+  <!-- Tittel for nettsidetab --> 
+  <title>Choes - startside</title>
+  
+  <!-- Metatag for tegnsett for siden --> 
+  <meta charset="UTF-8">
+  <!-- Metatag for responsivt desing -->
+
+  <meta name="description" content="Fotballsko, både Nike og Adidads for barneidretten">
+  <!-- Metatag for innhold for siden-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Intern lenke til css-filen for nettsiden --> 
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Ekstern lenke til javascript for ikon som jeg bruker for navigering--> 
+  <script src="https://kit.fontawesome.com/1a31441809.js" crossorigin="anonymous"></script>
+</head>
+<!-- Tag for <head> slutter her -->  
+<!-- Tag for <body> starter her, for det som vises på skjermen--> 
+<body>  
+  <!-- Tag for hele siden starter her. Det finnes ikke HTML5-tag for dette og jeg må bruke <div> -->
+<div class="site-container"> 
+  
+    <!-- Tag for topptekst og her med tittel på siden -->
+    <header>
+          <h1 class="mid-title">Choes</h1>
+    </header>  
+    <!-- Tag for topptekst slutter her-->
+  
+    <!-- Tag for hoveddel av nettsiden. Her med to knapper og to bilder, et bilde skjult i mobilvisning og det er fotballspilleren i svart-->
+    <main class="content-expand">   
+      <!-- Tag for artikkel starter her-->
+      <article>
+         <h2>Fordi samarbeid betyr noe.</h2> Choes samler inn brukte fotballsko 
+      </article>
+      <!-- Tag for artikkel slutter her-->
+      
+        <!-- Tag for første navigasjonsknappen - produkter-->
+        <nav class="button-container">
+          <a href="product.html" class="button center">Produkter</a>
+        </nav>   
+        <!-- Tag for første navigasjonsknappen slutter her-->
+      
+        <!-- Tag for FN-bilde starter her, er hentet fra FN sin hjemmeside-->
+        <figure class="image-container"> 
+          <img src="img/FN12.png" class="center" alt="FNs berekraftsmal nr 12">
+        </figure>      
+        <!-- Tag for FN-bilde slutter her-->
+      
+        <!-- Tag for fotballspiller-bilde  starte her (skjult i mobilvisning), er hentet fra pixabay.com-->
+        <figure class="image-container2" > 
+          <img src="img/Fotballspiller.png" class="desktop-only" alt="Fotballspiller">
+        </figure>
+        <!-- Tag for fotballspiller-bilde slutter her-->
+      
+        <!-- Tag for andre navigasjonsknappen - bestilling-->
+        <nav class="button-container">
+          <a href="order.html" class=" button center">Bestilling</a>
+        </nav>
+        <!-- Tag for andre navigasjonsknappen slutter her-->
+   
+    </main>
+  
+    <footer>
+        <nav>
+          <a href="index.html" class="icon" aria-label="Lenke til Hjemmesiden" title="Lenke til hjemmesida"><i class="fa-solid fa-house fa-2xl"alt="Hovedsiden "></i></a>
+          <a href="product.html" class="icon" aria-label="Lenke til Produktsiden" title="Lenke til produktene"><i class="fa-solid fa-cart-shopping fa-2xl"alt="Produktside"></i></a>
+          <a href="order.html" class="icon" aria-label="Lenke til Bestillingsside" title="Lenke til bestilling"><i class="fa-solid fa-user fa-2xl"alt="Bestillingsside"></i></a>
+          <a href="analyse.html" class="icon" aria-label="Lenke til Analysesiden" title="Lenke til analysesiden"><i class="fa-solid fa-stethoscope"alt="Analysesiden"></i></a>
+        </nav>
+    </footer>
+</div>
+<!-- Div Tag for hele siden slutter her finnes som sagt ikke HTML5 tag, og jeg må bruke <div> -->
+
+</body>
+<!-- Tag <body> slutter her--> 
+</html>
