@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="no">
+<!-- Nettsiden deles inn i <head> og <body> --> 
+
+<!-- Tag for <head> starter her, med tittel for nettsidetab, tegnsett og link til css og javascript --> 
+<head>
+  <!-- Tittel for nettsidetab --> 
+  <title>Choes - analysesiden</title>
+  
+  <!-- Metatag for tegnsett for siden --> 
+  <meta charset="UTF-8">
+  <!-- Metatag for responsivt desing -->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Intern lenke til css-filen for nettsiden --> 
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <!-- Ekstern lenke til javascript for ikon som jeg bruker for navigering--> 
+  <script src="https://kit.fontawesome.com/1a31441809.js" crossorigin="anonymous"></script>
+</head>
+<!-- Tag for <head> slutter her -->  
+<!-- Tag for <body> starter her, for det som vises på skjermen--> 
+<body>  
+  <!-- Tag for hele siden starter her. Det finnes ikke HTML5-tag for dette og jeg må bruke <div> -->
+<div class="site-container"> 
+   <!-- Tag for header starter her <div> -->
+    <header>
+          <h1 class="mid-title">Analyse-side</h1>
+    </header>  
+  +<main>
+             
+    <section>
+        <h2>Forbedringsanalyse - Choes</h2>
+        <p>
+            Her dokumenterer du resultatene av analysen av ditt nettsted før forbedringstiltakene ble implementert.
+            Dette kan inkludere beskrivelser av problemer, skjermbilder, og forklaringer på hva som var galt.
+        </p>
+        <ul>
+            <li>
+                <h4>Analyse av viktige nøkkelord</h4> 
+                <p>
+                Jeg la inn fotballsko; fotballsko Nike og fotballsko AdidasDette etter å ha prøvd ulike andre søkeord, som breddeidrett, idrett, cup, Norway Cup og breddeutstyr,som ble for generelle og ikke ga like gode sidetreff som mine ord. Nedenfor er bilde av:
+                </p>
+                <img src="img/231104 google trends-fotballsko breddeutstyr barneidrett.png" alt="Trends-resultat for fotballsko, breddeidrett og barneutstyr">
+            </li>
+           
+        </ul>
+        <ul>
+            <li>
+                <h4>Analyse av SEO</h4> 
+                <p>
+                Når jeg analyserte nettsiden gjennom lighthouse fikk jeg 92 % på mobile-siden, og 90% på desktop. Det som manglet var meta description.
+                </p>
+                <img src="img/231104 Lighthouse SEO-rapport for nettsdtedet Choes.png" alt="SEO-resultat for Choes-siden">
+            </li>
+           
+        </ul>
+        <ul>
+            <li>
+                <h4>Analyse av UU</h4> 
+                <p>
+                Jeg kjørte Index.html gjennom Webaim og fikk error på 3 tomme linker. Så fikk jeg 2 error på lav kontrast. Fikk i tillegg 2 advarsler på manglaende nivå på heading og hoppet over et heading nivå.
+                </p>
+                <img src="img/231105 Webaim-analyse av nettstedet Choes.png" alt="UU-analyse av Choes-siden">
+            </li>
+           
+        </ul>
+    </section>
+    <section>
+        <h2>Forbedringstiltak - Choes</h2>
+        <p>
+            I oppgaven skulle bruke ChatGPT til å vurdere all koden min, knyttet til SEO og UU. Hovedeanaøysen til ChatGPT var følgende: "Koden du har delt ser ut til å fungere godt, men det er noen få SEO- og UU-relaterte forbedringer og løsninger som du kan vurdere"
+        
+        </p>
+        <ul>
+            <li>1. Manglende metatags for SEO</li>
+            <li>2. Alt-attributter for bilder</li>
+            <li>3. Sidetitler</li>
+            <li>4. Struktur og semantikk</li>
+            <li>5. Tastaturnavigasjon</li>
+            <li>6. Kontrast og lesbarhet</li>
+            <li>7. ARIA-attributter</li>
+
+
+            
+        </ul>
+    </section>
+    <section>
+        <h1>Resultat Sammenligning</h1>
+
+        <table border="1">
+            <tr>
+                <th>ChatGPT Resultater</th>
+                <th>Lighthouse Resultater</th>
+                <th>WebAIM Resultater</th>
+            </tr>
+            <tr>
+                <td>Manglende metatags for SEO</td>
+                <td>Nettsiden manglet meta description</td>
+                <td>Nettsiden hadde 3 tommer linker</td>
+            </tr>
+            <tr>
+                <td>Manglet alt-attributter for bilder</td>
+                <td></td>
+                <td>Nettsiden hadde 2 fielmeldinger på lav kontrast</td>
+            </tr>
+            <tr>
+                <td>Nettsiden manglet sidetitler</td>
+                <td></td>
+                <td>Nettsiden hadde 2 advarsler på heading nivå</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <h1>Forbedringstiltak som jeg har gjort på Choes-siden</h1>
+        <p>
+            1. Lagt til metatags description for Fotballsko, Fotballsko Nike og Fotbasko Adidas
+            2. Endret fargene på Buttons slik at kontrasten skulle bli bedre i forhold til skritften
+            3. La til ARIA-attributter for skjermeleser, for dei med nedsatt syn.
+            4. Fikset 3 tommer linker på nettsiden 
+            5. La til alt-attributter for bilder på nettsiden 		
+            6. La til sidetitler som manglet på sidene		
+            7. Forandret på 2 plasser, der nivået på headning var lav
+        </p>
+        <p>
+            I tillegg vil jeg nevne at lighthouse ikke reagert på manglende alt-attributter for bilder og manglende sidetitler. Dette reagert derimot ChatGPT
+        </p>
+    </section>
+</main>
+  
+    <footer>
+        <nav>
+          <a href="index.html" class="icon" aria-label="Lenke til Hjemmesiden" title="Lenke til hjemmesida"><i class="fa-solid fa-house fa-2xl"alt="Hovedsiden "></i></a>
+          <a href="product.html" class="icon" aria-label="Lenke til Produktsiden" title="Lenke til produktene"><i class="fa-solid fa-cart-shopping fa-2xl"alt="Produktside"></i></a>
+          <a href="order.html" class="icon" aria-label="Lenke til Bestillingsside" title="Lenke til bestilling"><i class="fa-solid fa-user fa-2xl"alt="Bestillingsside"></i></a>
+          <a href="analyse.html" class="icon" aria-label="Lenke til Analysesiden" title="Lenke til analysesiden"><i class="fa-solid fa-stethoscope"alt="Analysesiden"></i></a>
+        </nav>
+    </footer>
+</div>
+<!-- Div Tag for hele siden slutter her finnes som sagt ikke HTML5 tag, og jeg må bruke <div> -->
+
+</body>
+<!-- Tag <body> slutter her--> 
+</html>
