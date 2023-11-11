@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="no">
+<!-- Nettsiden deles inn i <head> og <body> Tag for <head> starter her, med tittel for nettsidetab, tegnsett og link til css og javascript --> 
+  
+<head>
+  <!-- Tittel for nettsidetab --> 
+  <title>Choes Produktside - startside</title>
+
+  <!-- Metatag for tegnsett for siden --> 
+  <meta charset="UTF-8">
+
+  <meta name="description" content="Fotballsko, både Nike og Adidads for barneidretten">
+  <!-- Metatag for responsivt desing --> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Intern lenke til css-filen for nettsiden --> 
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!-- Ekstern lenke til javascript for ikon som jeg bruker for navigering--> 
+  <script src="https://kit.fontawesome.com/1a31441809.js" crossorigin="anonymous"></script>
+</head>
+<!-- Tag for <head> slutter her --> 
+
+<!-- Tag for <body> starter her, for det som vises på skjermen--> 
+<body> 
+
+  <!-- Tag for hele siden starter her. Det finnes ikke HTML5-tag for dette og jeg må bruke <div> -->
+<div class="site-container"> 
+
+   <!-- Tag for topptekst og her med tittel på siden -->
+    <header>
+          <h1 class="mid-title">Produkter</h1>
+    </header>  
+    <!-- Tag for topptekst slutter her-->
+
+    <!-- Tag for hoveddel av nettsiden. Her er oversikte over de ulike fotballmerkene og bestillingselementet-->
+    <main class="content-expand">   
+  
+      <h2 class="shoe-title" id="adidas-title">Adidas</h2>
+      <section class="image-wrapper3" id="adidas-images">
+     
+          <figure class="image-container3">
+              <img src="img/shutterstock_1139582861.jpg" alt="Adidas svart" class="image" onclick="updatePartImage('img/shutterstock_1139582861.jpg')">
+          </figure>
+          <figure class="image-container3">
+              <img src="img/shutterstock_2196579025.jpg" alt="Adidas høy" class="image" onclick="updatePartImage('img/shutterstock_2196579025.jpg')">
+          </figure>
+          <figure class="image-container3">
+              <img src="img/shutterstock_598663892.jpg" alt="Adidas blå" class="image" onclick="updatePartImage('img/shutterstock_598663892.jpg')">
+          </figure>
+      </section>
+      
+      <h2 class="shoe-title" id="nike-title">Nike</h2>
+        <section class="image-wrapper3" id="nike-images">
+     <figure class="image-container3">
+        <!--Bildene er kjøpt sutterstock.com-->
+              <img src="img/shutterstock_679986766.jpg" alt="Nike gul" class="image" onclick="updatePartImage('img/shutterstock_679986766.jpg')">
+          </figure>
+          <figure class="image-container3">
+              <img src="img/shutterstock_717789286.jpg" alt="Nike oransje" class="image" onclick="updatePartImage('img/shutterstock_717789286.jpg')">
+          </figure>
+          <figure class="image-container3">
+              <img src="img/shutterstock_1129930367.jpg" alt="Nike svart" class="image" onclick="updatePartImage('img/shutterstock_1129930367.jpg')">
+          </figure>
+      </section>
+      
+      <section class="three-parts-wrapper">
+          <div class="part">
+          <img id="selectedImage" src="img/Velgensko.png" alt="Valgt bilde" style="width:100%; height: 100%; object-fit: cover;">
+         </div>
+        <div class="part">
+            <p id="selectedImageName">Skonavn</p>
+
+            <p>
+                Skonr: 
+                <select id="shoeSizeSelect">
+                  <option value="-">---</option>
+                  <option value="32">32</option>
+                  <option value="33">33</option>
+                  <option value="34">34</option>
+                  <option value="35">35</option>
+                  <option value="36">36</option>
+                  <option value="37">37</option>
+                  <option value="38">38</option>
+                  <option value="39">39</option>
+                  <option value="40">40</option>
+                  <option value="41">41</option>
+                  <option value="42">42</option>
+                  <option value="43">43</option>
+                  <option value="44">44</option>
+                  <option value="45">45</option>
+                </select>
+            </p>
+            <p>
+                Pris: 
+                <select id="priceSelect">
+                  <option value="-">---</option>
+                    <option value="500">kr 500</option>
+                    <option value="600">kr 600</option>
+                    <option value="500">kr 700</option>
+                    <option value="600">kr 800</option>
+                    <option value="500">kr 900</option>
+                    <option value="1000">kr 1000</option>
+                </select>
+            </p>
+        </div>
+"
+         <div class="part">
+        <form id="orderForm" action="order.html" method="get">
+            <input type="hidden" id="shoeNameInput" name="shoeName">
+            <input type="hidden" id="shoeSizeInput" name="shoeSize">
+            <input type="hidden" id="priceInput" name="price">
+          <button type="submit" class="button">Bestill</button>
+        </form>
+         </div>
+      </section>
+
+    </main>
+    <!-- Tag for hoveddel slutt her og tag for bunntekst begynner-->
+    <footer>
+        <nav>
+            <a href="index.html" class="icon" aria-label="Lenke til Hjemmesiden" title="Lenke til hjemmesida"><i class="fa-solid fa-house fa-2xl"alt="Hovedsiden "></i></a>
+            <a href="product.html" class="icon" aria-label="Lenke til Produktsiden" title="Lenke til produktene"><i class="fa-solid fa-cart-shopping fa-2xl"alt="Produktside"></i></a>
+            <a href="order.html" class="icon" aria-label="Lenke til Bestillingsside" title="Lenke til bestilling"><i class="fa-solid fa-user fa-2xl"alt="Bestillingsside"></i></a>
+            <a href="analyse.html" class="icon" aria-label="Lenke til Analysesiden" title="Lenke til analysesiden"><i class="fa-solid fa-stethoscope"alt="Analysesiden"></i></a>
+          </nav>
+    </footer>
+   <!-- Tag for bunntekst sluttt her--> 
+</div>
+
+  <!-- Brukt ChatGpt for å få javascript-kodefor å flytte bilde og bilde navn, samt å flytte over valgte variabler til order.html-->
+ <script>
+  
+  function updatePartImage(imageSrc) {
+      var selectedImage = document.getElementById('selectedImage');
+      selectedImage.src = imageSrc;
+      selectedImage.style.display = "block";
+  }
+
+  document.addEventListener("DOMContentLoaded", function() {
+      const images = document.querySelectorAll('.image-container3 .image');
+      const selectedImage = document.getElementById('selectedImage');
+      const selectedImageName = document.getElementById('selectedImageName');
+
+      images.forEach(img => {
+          img.addEventListener('click', function() {
+              const chosenImageSrc = img.getAttribute('src');
+              const chosenImageName = img.getAttribute('alt');
+
+              selectedImage.src = chosenImageSrc;
+              selectedImageName.textContent = chosenImageName;
+          });
+      });
+
+      document.getElementById('orderForm').addEventListener('submit', function() {
+          // Get shoe name
+          var shoeName = document.getElementById('selectedImageName').innerText;
+          document.getElementById('shoeNameInput').value = shoeName;
+
+          // Get shoe size
+          var shoeSize = document.getElementById('shoeSizeSelect').value;
+          document.getElementById('shoeSizeInput').value = shoeSize;
+
+          // Get price
+          var price = document.getElementById('priceSelect').value;
+          document.getElementById('priceInput').value = price;
+      });
+  });
+ </script>
+
+</body>
+<!-- Tag <body> slutter her--> 
+</html>
